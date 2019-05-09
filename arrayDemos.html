@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Array Demos</h2>
+    <script>
+
+// Task1
+
+    // var aNames = [];
+    // aNames.push('Peter');
+    // aNames.push('Amanda');
+    // aNames.push('John');
+    // aNames.push('Tim');
+    // aNames.push('Kate');
+    // aNames.push('Chloe');
+    // aNames.push('Chris');
+    // aNames.push('Charlie');
+
+    // // for (i=0;i<7;i++){
+    // //     document.write('<h2>Hello '+aNames[i]+'</h2>');
+    // // }
+
+    //  for (i=0;i<aNames.length;i++){
+    //     document.write('<h2>Hello '+aNames[i]+'</h2>');
+    // }
+
+
+    // var aCity = [];
+    //  aCity.push('Auckland');
+    //  aCity.push('Wellington');
+    //  aCity.push('Christchurch');
+    //  aCity.push('Dunedin');
+
+    // document.write('<h2>Task 1: City '+aCity[0]+'</h2>');
+
+
+    //  for (i=0;i<aCity.length;i++){
+    // document.write('<h2>Task 2: Cities '+aCity[i]+'</h2>');
+    //  }
+
+// Task2
+
+    // var sLuckyday;
+    // sLuckyday = prompt('Pick a number from 0 to 6') 
+
+    // var aDay = [];
+    // aDay.push('Monday');
+    // aDay.push('Tuesday');
+    // aDay.push('Wednesday');
+    // aDay.push('Thursday');
+    // aDay.push('Friday');
+    // aDay.push('Saturday');
+    // aDay.push('Sunday');
+
+    // document.write('<h2>Your Lucky day is '+aDay[sLuckyday]+'</h2>');
+
+// Task3
+
+//     var aColour =[];
+//     aColour.push('Red');
+//     aColour.push('Blue');
+//     aColour.push('Red');
+//     aColour.push('Blue');
+//     aColour.push('Green');
+//     aColour.push('Red');
+//     aColour.push('Red');
+//     aColour.push('Green');
+//     aColour.push('Blue');
+//     aColour.push('Red');
+
+//     var iRed = 0;
+//     var iBlue = 0;
+//     var iGreen = 0;
+
+//     for (var i=0;i<aColour.length;i++){
+//         if (aColour[i] == 'Red') {
+//             iRed++
+//         }
+//         if (aColour[i] == 'Blue') {
+//             iBlue++
+//         }
+//         if (aColour[i] == 'Green') {
+//             iGreen++
+//         }
+//     }
+// document.write('<h2> Red '+iRed+', Blue '+iBlue+', Green '+iGreen+'</h2>')
+
+// Task4
+
+
+//input
+
+// var iStudents = parseInt(prompt('How many students are in your class?'));
+
+// var sFavsoda = '';
+// var aSoda=[];
+// var iCoke = 0;
+// var iPepsi = 0;
+
+
+
+//   for (var i=1;i<=iStudents;i++){
+
+//         sFavsoda = prompt('Do you prefer Coke or Pepsi?')
+
+//         if (sFavsoda == 'Coke'){
+//             aSoda.push('Coke');
+//         }
+//         if (sFavsoda == 'Pepsi'){
+//             aSoda.push('Pepsi');
+//         }
+//     }
+
+// for (var i=0;i<aSoda.length;i++){
+//         if (aSoda[i] == 'Coke'){
+//             iCoke++
+//         }
+//         if (aSoda[i] == 'Pepsi'){
+//             iPepsi++
+//         }
+// }
+
+//  document.write('<h2> Coke '+iCoke+', Pepsi '+iPepsi+'</h2>')
+
+
+// Task5
+
+var iStudents = parseInt(prompt('How many students are in your class?'));
+
+var aGrade=[];
+var iGrade='';
+var iHighest=0;
+var iLowest=100;
+var iTotal=0;
+
+for (var i=1;i<=iStudents;i++){
+
+iGrade = parseInt(prompt('What was your grade from 0 to 100%?'));
+ aGrade.push (iGrade);
+}
+
+
+for (var i=0;i<=aGrade.length;i++){
+
+if (aGrade[i] > iHighest) {
+    iHighest = aGrade[i];
+}
+
+}
+
+for (var i=0;i<=aGrade.length;i++){
+
+if (aGrade[i] < iLowest) {
+    iLowest = aGrade[i];
+}
+
+}
+
+for (var i=0;i<aGrade.length;i++) {
+    iTotal += aGrade[i];
+}
+
+
+
+ document.write('<h2> Highest Grade '+iHighest+'<br>Lowest Grade '+iLowest+' <br>Average '+iTotal/aGrade.length+'</h2>')
+    </script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+// Rectangle Size
+    // function makeStars(iNuminput) {
+    //     var sStarsOutput = '';
+
+    //     for (var i =0; i <iNuminput; i++) {
+    //         sStarsOutput += '*';
+    //     }
+    //     return sStarsOutput;
+    // }
+    
+    // // M program
+
+    // var iTreeWidth = parseInt (prompt('Width of tree'));
+    // var iTreeHeight = parseInt (prompt('Height of tree'));
+    
+    // var sRectangle = '';
+    // var sLayer = makeStars(iTreeWidth);
+
+    // for (var i=0; i<iTreeHeight;i++) {
+    //     sRectangle += sLayer +'<br>';
+
+    // }
+    // document.write (sRectangle);
+
+
+// Tree Size
+
+    //     function makeStars(iNuminput) {
+    //     var sStarsOutput = '';
+        
+
+    //     for (var i =0; i <iNuminput; i++) {
+    //         sStarsOutput += '*';
+    //     }
+    //     return sStarsOutput;
+    // }
+    
+    // // M program
+
+    // var iNumber = parseInt (prompt('How big do you want your tree '));
+    
+    // var sTree = '';
+
+    // for (var i= iNumber; i> 0;i--) { // Stepping down
+    //     var sStarsInLayer = makeStars(i);
+    //     sTree += sStarsInLayer +'<br>';
+
+    // }
+    // document.write (sTree);
+
+
+
+            function makeStars(iNuminput) {
+        var sStarsOutput = '';
+        
+
+        for (var i =0; i <iNuminput; i++) {
+            sStarsOutput += '*';
+        }
+        return sStarsOutput;
+    }
+    
+    // M program
+
+    var iNumber = parseInt (prompt('How big do you want your tree '));
+    
+    var sTree = '';
+
+    for (var i=0; i < iNumber ;i++) { // Stepping down
+        var sStarsInLayer = makeStars(i);
+        sTree += sStarsInLayer +'<br>';
+
+    }
+    document.write ('<div class="treeStyles">'+sTree+'*</div>');
+    </script>
+    <style>.treeStyles {
+        text-align:center;
+        font-size:3em;
+        color:aquamrine;
+    }</style>
+
+
+</body>
+</html>

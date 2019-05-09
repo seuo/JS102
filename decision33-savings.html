@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Savings Account</title>
+</head>
+<body>
+    <script>
+
+    
+    // //input: Balance, Withdraw
+    //     var iBalance = prompt('Please enter your balance')
+    //     var iWithdraw = prompt('Please now enter the amount you would like to withdraw')
+
+    // //processing: sMessage
+
+    //     var iRemainingBalance;
+    //     if(iBalance-iWithdraw<0){
+    //         iRemainingBalance = 'withdrawel denied';
+    //     }
+        
+    //     if((iBalance-iWithdraw<150)&&(iBalance-iWithdraw>0)){
+    //         iRemainingBalance = 'Balance below $150';
+    //     }
+
+    //     else {
+    //         iRemainingBalance = 'your remaining balance is $'+(iBalance-iWithdraw)
+    //     }
+
+    // //output: Message
+    //     document.write(iRemainingBalance);
+
+
+
+    //input: Balance, Withdraw
+        var sBalance = prompt('Please enter your balance')
+        var sWithdraw = prompt('Please now enter the amount you would like to withdraw')
+        var fBalance = parseFloat(sBalance);
+        var fWithdraw = parseFloat(sWithdraw);
+
+    //processing: sMessage
+
+        var sMessage = '';
+
+        if(fBalance < fWithdraw){
+            sMessage = 'Sorry, you do not have enough money';
+        }
+        else{
+            // fBalance = fBalance - fWithdraw;
+            fBalance -= fWithdraw;
+        }
+        if(fBalance < 150){
+            sMessage += 'Your balance is low';
+        }
+        
+
+    //output: Message
+ 
+        document.write('<h1>Your balance is</h2>'+fBalance.toFixed(2));
+        document.write('<h1>'+sMessage+'</h1>');
+
+    </script>
+</body>
+</html>

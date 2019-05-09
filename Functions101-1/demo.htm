@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Function demos</h2>
+    <script>
+    //Define a function ------
+    function makeStars(iNumInput){
+        var sStarsOutput = '';
+        var iNumber = 0;
+        for (var i = 0; i < iNumInput; i++) {
+            sStarsOutput += '*';
+        }
+        return sStarsOutput; // Returning output
+    }
+    //Main program --------
+    var sSeanStars = makeStars(5); //Calling the function
+    var sLukeStars = makeStars(20); //Calling the function
+
+    var sNumber = prompt('How many stars your like');
+    var iNumber = parseInt(sNumber);
+    var sRequestedStars = makeStars(iNumber); //Calling the function
+
+    document.write('Stars for Sean : ' + sSeanStars + '<br>');
+    document.write('Stars for Luke : ' + sLukeStars + '<br>');
+    document.write('Requested stars : ' + sRequestedStars + '<br>');
+    </script>
+</body>
+</html>

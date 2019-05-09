@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // Sasha
+    //Define a function ------
+    function idealAge(iNumInput){
+        var fAgeOutput= 0;
+        fAgeOutput = iNumInput/2 +7;
+        return fAgeOutput;
+    }
+
+    //Main program
+        // var sAlexAge = idealAge(25);
+        var sUserAge = prompt('What is your age?');
+        var sWifeAge = prompt('What is your wifes age?');
+        var iUserAge = parseInt(sUserAge);
+        var fWifeAge = parseFloat(sWifeAge);
+
+        var fWifeIdealAge = idealAge(iUserAge);
+        var sAnswer = '';
+        if( fWifeAge > fWifeIdealAge){
+            sAnswer = 'She is older than ideal';
+        }
+        if( fWifeAge < fWifeIdealAge){
+            sAnswer = 'She is younger than ideal';
+        }
+        if( fWifeAge== fWifeIdealAge){
+            sAnswer = 'She is the one';
+        }
+        document.write('<h1>Your wife is '+fWifeAge+'</h2>');
+        document.write('<h1>Your ideal wife should be '+fWifeIdealAge+' years old.</h1>');
+        document.write('<h1>'+sAnswer+'</h2>');
+        
+    //Main program --------
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        body{
+            font-size: 3em;
+            color:tomato;
+            text-align: center;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // Kiko
+    //Define a function ------
+    function makeStars(iNumInput){
+        var sStarsOutput = '';
+        for (var i = 0; i < iNumInput; i++) {
+            sStarsOutput += '*';
+        }
+        return sStarsOutput; // Returning output
+    }
+    //Main program --------
+    var sWidth = prompt('Please give me the width');
+    var iWidth = parseInt(sWidth);
+    var sHeight = prompt('Please give me the height');
+    var iHeight = parseInt(sHeight);
+
+    var sRectangle = '';
+    var sLayer = makeStars(iWidth);
+    
+    for(var i = 0; i < iHeight; i++){
+        sRectangle += sLayer + '<br>';
+    }
+    document.write (sRectangle);
+
+    </script>
+</body>
+</html>

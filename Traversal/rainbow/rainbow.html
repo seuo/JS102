@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href="styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+	<div>
+
+		<div>
+     
+            <div id="middle">
+            
+                <div>
+                
+                    <div>
+                    
+                    </div>
+                
+                </div>
+            
+            </div>
+        
+        </div>
+
+
+	</div>
+
+	<script type="text/javascript">
+
+	var oMid = document.querySelector("#middle");
+	var oRainbow = oMid.parentNode.parentNode;
+	var aRainbow = [];	
+
+	
+	for (var i=0; i<5;i++){
+		var sColor = prompt('What colour (red, orange, yellow, green, blue and indigo)? ');
+		aRainbow.push(sColor);
+	} 
+	
+	// oRainbow.style.backgroundColor = aRainbow[0];
+	// oRainbow.children[0].style.backgroundColor = aRainbow[1];
+	// oRainbow.children[0].children[0].style.backgroundColor = aRainbow[2];
+	// oRainbow.children[0].children[0].children[0].style.backgroundColor = aRainbow[3];
+	// oRainbow.children[0].children[0].children[0].children[0].style.backgroundColor = aRainbow[4];
+
+	var oCurrent = oRainbow;
+
+	for (var i=0; i<5;i++){
+		oCurrent.children[0].style.backgroundColor = aRainbow[i];
+		oCurrent = oRainbow.children[0];
+	}
+	
+	</script>
+	
+</body>
+</html>

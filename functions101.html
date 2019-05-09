@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+// Example 1
+
+    // // Define a functions -------
+    // function makeStars(iNumInput){
+    //     var sStarsOutput ='';
+    //     for (var i=0;i<  iNumInput; i++) {
+    //         sStarsOutput += '*';
+    //     }
+    //     return sStarsOutput;
+    // }
+
+
+    // // Main program ------
+    // // Call/Invoke the function
+
+    // var sFiveStars = makeStars(5);
+
+    // var iNumber = parseInt(prompt('How many stars do you want?'));
+    // var sRequestStars = makeStars(iNumber);
+
+    // document.write('<h2>'+sFiveStars+'</h2>')
+    // document.write(sRequestStars);
+
+
+
+// Task 1
+
+
+// Define Function
+
+function minMage(iMage){
+    var iWomensAge = 0;
+
+    iWomensAge = (iMage/2)+7;
+
+return iWomensAge;
+}
+
+// // Main Program - call/invoke
+var iMansAge =  parseInt (prompt('How old are you?'));
+var Man = minMage(iMansAge);
+var iPartner = parseInt(prompt('What is your partners age?'))
+
+document.write('<h1>Your age '+iMansAge+'</h1>');
+document.write('<h1>Your "partners" age '+iPartner+'</h1>');
+document.write('<h1>The ideal age for you is '+Man+'</h1>');
+
+if (iPartner == Man) {
+    document.write('<h1>Perfect!</h1>');
+}
+
+if (iPartner > Man) {
+    document.write('<h1>It is acceptable to see someone younger</h1>');
+}
+
+if (iPartner < Man) {
+    document.write('<h1>You sicko, take a look at yourself in the mirror & re-evaluate!</h1>');
+}
+
+
+function bmi(weight,height){
+    var iBmi = '0';
+    iBmi = weight/(height^2);
+
+    return iBmi;
+
+}
+
+var iWeight = parseFloat(prompt('What is your weight?'));
+var iHeight = parseFloat(prompt('What is your height?'));
+var fBmi = bmi(iWeight,iHeight);
+
+
+
+if (fBmi < 16) {
+    document.write('<h1>You are a bit scrawny, do you even lift?</h1>');
+}
+
+if (fBmi > 25) {
+    document.write('<h1>A bit over weight, maybe start halving your portions!</h1>');
+}
+
+if ((fBmi>18.5 ) && ( fBmi<25)) {
+    document.write('<h1>You are a healthy human! Your BMI is '+fBmi+'</h1>');
+}
+
+    </script>
+</body>
+</html>

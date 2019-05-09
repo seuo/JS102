@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <script>
+    
+                //input
+                var iCopies
+                iCopies = prompt('How many copies')
+            
+                //processing
+                var fCost
+                if (iCopies <= 100) {
+                    fCost = iCopies * 0.05;
+                }
+            
+                else {
+                    fCost = 5 + (iCopies - 100) * 0.03;
+                }
+            
+                //output
+                    document.write('Total amount due $ '+fCost.toFixed(2)+' Thanks');
+            
+                </script>
+</body>
+</html>

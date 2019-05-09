@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href="styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+	<div id="container">
+
+		<div>box 0</div>
+		<div>box 1</div>
+		<div>box 2</div>
+		<div>box 3</div>
+		<div>box 4</div>
+		<div>box 5</div>
+		<div>box 6</div>
+		<div>box 7</div>
+
+	</div>
+
+	<script type="text/javascript">
+	var aBox  = document.querySelectorAll('#container div');
+	for (i=0;i<aBox.length;i++){
+		aBox.className = 'redBorder';	
+	}	
+	</script>
+	
+</body>
+</html>

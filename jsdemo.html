@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>demo - lifestyle coach</h1>
+
+    <script>
+        //input
+        var birthYear;
+        birthYear = prompt('Please tell me your year of birth', '1999')
+
+        //processing: find our your age and what you should be doing
+        
+        var yourAge; //bucket
+        yourAge = 2019 - birthYear;
+
+        var activity;
+        //If you are a child if( condition < 18 )
+        if( yourAge < 18 ){ //assign
+            //what to do when condition is met
+                activity = 'Enjoy your icecream';
+        }
+
+        //If you are working ( multiple conditions AND=&& )
+        if( (yourAge >=18) && (yourAge<65) ){
+                activity = 'Slave Away';
+        }
+
+        //If you are retired (greater than and equal to)
+        if (yourAge >= 65 ){
+            activity = 'Enjoy a whiskey';
+        }
+
+        //output output your activity
+
+            document.write('<h2>Your age is ' + yourAge + '</h2>');
+            document.write('<h2>' + activity + '</h2>');
+
+    </script>
+    
+</body>
+</html>

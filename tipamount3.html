@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+    //input
+    var sBill;
+    sBill = prompt('How much is the bill','0.00')
+
+    //processing
+    var fTip;
+    fTip = sBill *.15;
+
+    //output
+    if (fTip > 1) {
+    document.write('Tip amount required $',fTip);
+    }
+    else {
+    document.write('Tip amount required $',1);
+    }
+
+
+
+    </script>
+</body>
+</html>

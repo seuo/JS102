@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        body{
+            font-size: 3em;
+            color:tomato;
+            text-align: center;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //Define a function ------
+    function makeStars(iNumInput){
+        var sStarsOutput = '';
+        for (var i = 0; i < iNumInput; i++) {
+            sStarsOutput += '*';
+        }
+        return sStarsOutput; // Returning output
+    }
+    //Main program --------
+    var sNumber = prompt('Tree size please');
+    var iNumber = parseInt(sNumber);
+
+    var sTree = '';
+    for (var i = 1; i <= iNumber; i++) {
+        var sStarsInLayer = makeStars(i);
+        sTree += sStarsInLayer + '<br>'
+    }
+    //Add the stump
+    sTree += '* <br>'
+
+    document.write(sTree);
+
+    </script>
+</body>
+</html>
