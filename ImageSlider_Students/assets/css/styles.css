@@ -1,0 +1,45 @@
+.imageslider {
+    /* border:solid red 1px; */
+    box-sizing: border-box;
+    width: 100vw;
+    height: 37.5vw;
+    position:relative;
+}
+
+.imageslider i {
+    position: absolute;
+    color:rgba(255,255,255,255.5);
+    top:50%;
+    z-index:100;
+    transform: translateY(-50%);
+    font-size:4vw;
+}
+
+.imageslider .fa-chevron-left {
+    left:0.5em;
+    cursor: pointer;
+}
+
+.imageslider .fa-chevron-right {
+    right:0.5em;
+    cursor: pointer;
+}
+
+.slides {
+    position:relative;
+}
+
+.slides>img{
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    transition:all ease 1s;
+    opacity:0;
+    pointer-events: none;
+}
+
+.slides>.current {
+    opacity:1;
+    pointer-events: all;
+}
