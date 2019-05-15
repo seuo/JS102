@@ -1,0 +1,160 @@
+/* Color scheme:
+	#FCE9CC
+	#FFCDAC
+	#FFA08B
+	#FF625E
+	#123638
+*/
+.image-slider{
+	width:100vw;
+	height: 40vw;
+	box-sizing: border-box;
+	position: relative;
+	overflow: hidden;
+}
+
+.image-slider i{
+	color:rgba(225,255,255,0.5);
+	position: absolute;
+	top:50%;
+	z-index: 100;
+	transform: translateY(-50%);
+	font-size: 4vw;
+}
+.image-slider i:hover{
+	color:#123638;
+}
+
+.image-slider .fa-chevron-circle-left{
+	left:0.5em;
+}
+
+.image-slider .fa-chevron-circle-right{
+	right:0.5em;
+}
+
+.slides{
+	position: relative;
+	height: 100%;
+}
+
+.slides>div{
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	padding:0 10vw;
+	transition:all ease 1s;
+	opacity: 0;
+	display: flex;
+	flex-wrap:wrap;
+	align-content: center;
+	font-family: 'Montserrat', sans-serif;
+	
+}
+.slides h1{
+	flex:0 0 100%;
+	font-size: 3em;
+	color:#123638;
+	margin:0;
+}
+.slides h2{
+	flex:0 0 100%;
+	color:#fff;
+	margin:1em 0;
+}
+
+.slides a{
+	background-color:#123638;
+	color:#fff;
+}
+
+.slides>div:nth-child(4n+1){
+	background-color:#FCE9CC;
+}
+.slides>div:nth-child(4n+2){
+	background-color:#FFCDAC;
+}
+.slides>div:nth-child(4n+3){
+	background-color:#FFA08B;
+}
+.slides>div:nth-child(4n+4){
+	background-color:#FF625E;
+}
+
+.slides>.current{
+	z-index: 50;
+	opacity: 1;
+	
+}
+
+/* dots */
+
+.dots {
+	position:absolute;
+	width:100%;
+	bottom:0;
+	left:0;
+	z-index:100;
+	display:flex;
+	justify-content:center;
+	margin-bottom:1em;
+}
+
+.dots>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: .1em;
+    height: .1em;
+	border-radius: 1em;
+	padding:1em;
+	position: relative;
+	border:.1em solid #fff;
+}
+
+.dots>.current-dot {
+	background-color:#fff;
+}
+
+/* Animation Thingy */
+
+.transition-fast {
+	transition: all ease 1s;
+}
+
+.transition-slow {
+	transition: all ease 3s;
+}
+
+.slide-in {
+	transform:translateX(-50vw);
+}
+
+.drop-in {
+	transform:translateY(-30vw);
+}
+
+.flip-in {
+	transform: perspective(4em) rotateX(30deg);
+}
+
+.current .slide-in {
+	transform:translateY(0)
+}
+
+
+.current .drop-in {
+	transform:translateY(0);
+}
+
+.current .flip-in {
+	transform:perspective(0) rotateX(0deg);
+}
+
+
+
+
+
