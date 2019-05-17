@@ -1,12 +1,1 @@
-
-.slides>.div {
-
-    width:100vw;
-    height:50em;
-
-}
-
-.slide1 {
-    background-image:url("queenstown.jpg");
-    background-size:cover;
-}
+*{padding:0;margin:0}h1{font-family:Courgette;color:#dcdc57;font-size:7em}.slides>div{position:absolute;width:100%;height:100vh}.slide1{background-image:url("queenstown.jpg");background-size:cover;background-position:bottom left}.slide1 h1{text-align:center;padding-top:1em}.slides>div .current{width:100vw;height:35%}.dots{position:relative;z-index:100;width:100%;height:100vh;display:flex;flex-direction:row;align-items:flex-end;justify-content:flex-start}.dots :nth-child(1){-webkit-transform:translate(32vw, -33vw);transform:translate(32vw, -33vw)}.dots :nth-child(1):hover{border-radius:200em;transition:2s ease all;-webkit-transform:scale(100);transform:scale(100);-webkit-transform-origin:bottom left;transform-origin:bottom left;opacity:0}.dots :nth-child(2){-webkit-transform:translate(47vw, -22vw);transform:translate(47vw, -22vw)}.dots :nth-child(3){-webkit-transform:translate(24vw, -13vw);transform:translate(24vw, -13vw)}.dots :nth-child(4){-webkit-transform:translate(16vw, -42vw);transform:translate(16vw, -42vw)}.dots :nth-child(5){-webkit-transform:translate(4vw, -22vw);transform:translate(4vw, -22vw)}.locationDot{z-index:100;background-color:white;width:1.5em;height:1.5em;border-radius:3em;justify-content:space-around;position:absolute}

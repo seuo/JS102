@@ -1,12 +1,88 @@
+* {
+    padding:0;
+    margin:0;
+}
 
-.slides>.div {
+h1 {
+    font-family:Courgette;
+    color:#dcdc57;
+    font-size:7em;
+}
 
-    width:100vw;
-    height:35%;
+.slides>div {
+    position: absolute;
+    width:100%;
+    height: 100vh;
 
 }
 
 .slide1 {
     background-image:url("queenstown.jpg");
     background-size:cover;
+    background-position: bottom left;
+
+    h1 {
+        text-align: center;
+        padding-top: 1em;
+    }
 }
+
+.slides>div .current {
+
+    width:100vw;
+    height:35%;
+
+}
+
+.dots {
+    position: relative;
+    z-index: 100;
+    width:100%;
+    height:100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-start;
+    
+    :nth-child(1) {
+        transform: translate(32vw, -33vw);
+       
+    }
+
+    :nth-child(1):hover {
+        border-radius: 200em;
+        transition: 2s ease all;
+        transform: scale(100);
+        transform-origin: bottom left;
+        opacity:0;
+        }
+  
+
+    :nth-child(2) {
+        transform: translate(47vw, -22vw);
+    }
+
+    :nth-child(3) {
+        transform: translate(24vw, -13vw);
+    }
+
+    :nth-child(4) {
+        transform: translate(16vw, -42vw);
+    }
+
+    :nth-child(5) {
+        transform: translate(4vw, -22vw);
+    }
+   
+}
+
+.locationDot {
+    z-index: 100;
+    background-color:white;
+    width:1.5em;
+    height:1.5em;
+    border-radius:3em;
+    justify-content: space-around;
+    position:absolute;
+}
+
