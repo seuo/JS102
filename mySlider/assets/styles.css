@@ -1,0 +1,12 @@
+
+.slides>.div {
+
+    width:100vw;
+    height:50em;
+
+}
+
+.slide1 {
+    background-image:url("queenstown.jpg");
+    background-size:cover;
+}
