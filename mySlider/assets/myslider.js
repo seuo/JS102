@@ -7,18 +7,27 @@ function moveNext() {
     if  (oCurrent.nextElementSibling != null) {
         oCurrent.nextElementSibling.classList.add('current');
     }else {
-        oCurrent.parentNode.firstChildElement.classList.add('current');
+        oCurrent.parentNode.firstElementChild.classList.add('current');
     }
 
     // move to location (change dot element)
 
-    var oLocationDot = document.querySelector('.locationDot');
-        oLocationDot.classList.remove('locationDot');
+    var oLocationDot = document.querySelector('.current-dot');
+        oLocationDot.classList.remove('current-dot');
 
         if (oLocationDot.nextElementSibling != null){
-            oLocationDot.nextElementSibling.classList.add('locationDot');
+            oLocationDot.nextElementSibling.classList.add('current-dot');
         }else {
-            oLocationDot.parentNode.firstChildElement.classList.add('locationDot');
+            oLocationDot.parentNode.firstElementChild.classList.add('current-dot');
+        }
+
+        var oNavDot = document.querySelector('.navDot');
+        oNavDot.classList.remove('navDot');
+
+        if (oNavDot.nextElementSibling != null){
+            oNavDot.nextElementSibling.classList.add('navDot');
+        }else {
+            oNavDot.parentNode.firstElementChild.classList.add('navDot');
         }
 
 }
@@ -32,19 +41,30 @@ function moveBack() {
         oCurrent.previousElementSibling.classList.add('current');
     }
     else {
-        oCurrent.parentNode.lastChildElement.classList.remove('current');
+        oCurrent.parentNode.lastElementChild.classList.add('current');
     }
 
     // move to prev location (change dot element)
 
-    var oLocationDot = document.querySelector('.locationDot');
-        oLocationDot.classList.remove('locationDot');
+    var oLocationDot = document.querySelector('.current-dot');
+        oLocationDot.classList.remove('current-dot');
 
         if (oLocationDot.previousElementSibling != null){
-            oLocationDot.previousElementSibling.classList.add('locationDot');
+            oLocationDot.previousElementSibling.classList.add('current-dot');
         }else {
-            oLocationDot.parentNode.prevElementSibling.classList.remove('locationDot');
+            oLocationDot.parentNode.lastElementChild.classList.add('current-dot');
         }
+
+        var oNavDot = document.querySelector('.navDot');
+        oNavDot.classList.remove('navDot');
+
+        if (oNavDot.previousElementSibling != null){
+            oNavDot.previousElementSibling.classList.add('navDot');
+        }else {
+            oNavDot.parentNode.lastElementChild.classList.add('navDot');
+        }
+
+    
 
 }
 
@@ -58,16 +78,30 @@ function moveTo() {
 
         //update current dot
 
-    var oCurrentDot = document.querySelector('.locationDot');
-        oCurrentDot.classList.remove('locationDot');
+    var oCurrentDot = document.querySelector('.current-dot');
+        oCurrentDot.classList.remove('current-dot');
 
-        this.classList.add('locationDot');
+        this.classList.add('current-dot');
 }
 
-    var oRight = document.querySelector('.fa-chevron-circle-right');
+// function goHome() {
+//     var oHome = document.querySelector('.current-dot');
+//     oHome.classList.remove('current-dot');
+
+//     var oGoHome = document.querySelector('.locationDot')
+//     oGoHome.parentNode.firstElementChild.classList.add('current-dot');
+    
+// }
+
+// var oHome = document.querySelector('.home');
+// oHome.addEventListener('click',goHome);
+
+    
+
+    var oRight = document.querySelector('.fa-chevron-right');
         oRight.addEventListener('click',moveNext);
 
-    var oLeft = document.querySelector('.fa-chevron-circle-left')
+    var oLeft = document.querySelector('.fa-chevron-left')
         oLeft.addEventListener('click',moveBack);
 
     var oDots = document.querySelector('.dots');
@@ -75,3 +109,7 @@ function moveTo() {
     for (var i = 0; i < oDots.children.length; i++) {
         oDots.children[i].addEventListener('click',moveTo);
     }
+
+    // for (var i = 0; i < oNav.children.length; i++) {
+    //     oNav.children[i].addEventListener('click',moveTo);
+    // }
