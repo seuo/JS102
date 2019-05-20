@@ -34,23 +34,26 @@
 }
 
 .slides{
-	position: relative;
+	position: absolute;
 	height: 100%;
+	display:flex;
+	top:0;
+	left:0;
+	transition:ease all 1s;
 }
 
 .slides>div{
-	position: absolute;
 	top:0;
 	left:0;
-	width: 100%;
+	flex:0 0 50vw;
+	justify-content: center;
 	height: 100%;
 	box-sizing: border-box;
-	padding:0 10vw;
 	transition:all ease 1s;
-	opacity: 0;
 	display: flex;
 	flex-wrap:wrap;
-	align-content: center;
+	align-items: center;
+	font-size: 10vw;
 	font-family: 'Montserrat', sans-serif;
 	
 }
@@ -84,11 +87,6 @@
 	background-color:#FF625E;
 }
 
-.slides>.current{
-	z-index: 50;
-	opacity: 1;
-	
-}
 
 /*Dots*/
 
@@ -101,7 +99,6 @@
 	display: flex;
 	justify-content: center;
 	margin-bottom:1em;
-
 }
 
 .dots>div{
