@@ -14,13 +14,15 @@
     touch-action: none;
   }
   #item {
-    width: 100px;
-    height: 100px;
-    background-color: rgb(245, 230, 99);
+    min-width: 1150px;
+    height: 812px;
+    // background-color: rgb(245, 230, 99);
     border: 10px solid rgba(136, 136, 136, .5);
-    border-radius: 50%;
+    // border-radius: 50%;
     touch-action: none;
     user-select: none;
+    background-image:url('dragmap.jpg');
+    background-size:cover;
   }
   #item:active {
     background-color: rgba(168, 218, 220, 1.00);

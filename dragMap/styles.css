@@ -22,17 +22,17 @@
 }
 
 #item {
-  width: 100px;
-  height: 100px;
-  background-color: #f5e663;
+  min-width: 1150px;
+  height: 812px;
   border: 10px solid rgba(136, 136, 136, 0.5);
-  border-radius: 50%;
   -ms-touch-action: none;
       touch-action: none;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  background-image: url("dragmap.jpg");
+  background-size: cover;
 }
 
 #item:active {
