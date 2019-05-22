@@ -1,0 +1,123 @@
+* {
+    padding:0;
+    border:0;
+    margin:0;
+    text-decoration: none;
+}
+
+h1 {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5em;
+    padding:.75em;
+}
+
+.wrap {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    background-color:#3cd6c5;
+    height:100vh;
+}
+
+.creditForm {
+    border-radius:1em;
+    flex:0 0 27%;
+    display: flex;
+    border-right:.1em;
+    background-color:#c8d6d5;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height:20em;
+
+    form{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items:center;
+       
+        input {
+            border-radius: .35em;
+        }
+
+        .cardType {
+            display:flex;
+            justify-content: space-around;
+
+            img{
+                width:90%;
+            }
+         }
+
+        .inputGroup1 input{
+            width:15em;
+            font-size:1em;
+            padding:.45em;
+        }
+        .inputGroup2 
+        input{
+            width:15em;
+            font-size:1em;
+            padding:.45em;
+            margin-top:1em;
+        }
+        .inputGroup3 {
+        input{
+            width:5em;
+            padding:.45em;
+            font-size:1em;
+            margin-top:1em;
+        }
+    }
+        .inputGroup4 {
+        
+        input{
+            width:3em;
+            padding:.45em;
+            font-size:1em;
+            margin-top:1em;
+        }
+    }
+}
+}
+
+.row1 {
+    width:75%;
+    display: flex;
+    justify-content: space-between;
+    .cardType>div {
+            justify-content: space-around;
+            flex:0 0 27%;
+            border-radius: .35em;
+            background-color: #f3f3f3;
+            padding: 0.25em;
+            margin: 0em 0 1em 0;
+            img {
+                width:100%;
+            }
+    }
+
+}
+
+
+.row2 {
+    width:75%;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.row3 {
+    width:75%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#invalidInput {
+    background-color: rgb(255, 179, 195);
+    color:black;
+}
+
+#validInput {
+    background-color: rgb(200, 255, 179);
+}
