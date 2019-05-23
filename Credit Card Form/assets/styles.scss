@@ -6,10 +6,16 @@
 }
 
 h1 {
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 1.5em;
+    font-family: Quicksand, open sans, roboto;
+    font-size: 1.8em;
     padding:.75em;
+    color:#2a8a7f;;
 }
+
+body {
+    font-family: Quicksand, open sans, roboto;
+}
+
 
 .wrap {
     display: flex;
@@ -17,6 +23,17 @@ h1 {
     align-items:center;
     background-color:#3cd6c5;
     height:100vh;
+    flex-direction: column;
+}
+
+.container {
+    flex:0 0 1%;
+    justify-content: center;
+    display: flex;
+    border-right: thin solid #34a89b;
+    border-bottom: thin solid #34a89b;
+    padding:2em;
+    width: 20em;
 }
 
 .creditForm {
@@ -24,11 +41,11 @@ h1 {
     flex:0 0 27%;
     display: flex;
     border-right:.1em;
-    background-color:#c8d6d5;
+    background-color:#ececec;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    height:20em;
+    box-shadow: 0px 0px 10px -3px rgba(0, 0, 0,.25);
 
     form{
         display: flex;
@@ -38,6 +55,17 @@ h1 {
        
         input {
             border-radius: .35em;
+            font-size:1em;
+            padding:.45em;
+            margin-top:1em;
+            text-align: center;
+        }
+
+
+
+        select {
+            border-radius: .35em;
+            height:2em;
         }
 
         .cardType {
@@ -49,35 +77,92 @@ h1 {
             }
          }
 
-        .inputGroup1 input{
-            width:15em;
-            font-size:1em;
-            padding:.45em;
-        }
-        .inputGroup2 
+        .inputGroup1 {
+            div {
+                position: absolute;
+                margin-top: 1em;
+                width: 8.5em;
+                margin-left: 19em;
+                transition: ease-in-out 1s;
+                opacity:0;
+                font-size:1em;
+            }
         input{
-            width:15em;
+            width:14em;
+            transition:.5s ease-in-out;
+        }
+    }
+        .inputGroup2 
+
+        div {
+            position: absolute;
+            margin-top: 1em;
+            width: 8.5em;
+            margin-left: 19em;
+            transition: ease-in-out 1s;
+            opacity:0;
             font-size:1em;
-            padding:.45em;
-            margin-top:1em;
+        }
+        input{
+            width:14em;
+            transition:.5s ease-in-out;
         }
         .inputGroup3 {
-        input{
-            width:5em;
+        select {
+            // width:3em;
             padding:.45em;
-            font-size:1em;
+            font-size:1.5em;
             margin-top:1em;
         }
     }
         .inputGroup4 {
         
-        input{
-            width:3em;
+        select {
+            // width:3em;
             padding:.45em;
-            font-size:1em;
+            font-size:1.5em;
             margin-top:1em;
         }
     }
+        .inputGroup5 {
+            .cvvError {
+                position: absolute;
+                margin-top: 1em;
+                width: 8.5em;
+                margin-left: 8em;
+                -webkit-transition: ease-in-out 1s;
+                transition: ease-in-out 1s;
+                opacity: 0;
+                font-size: 1.33em;
+                color: #298a7f;
+                margin-top:1.1em;
+            }
+            input{
+                width:2em;
+                font-size:1.5em;
+                transition:.5s ease-in-out;
+            }
+    }
+
+    .inputGroup6 {
+        width:100%;
+        button {
+            width:10em;
+            padding:.45em;
+            font-size:2em;
+            border-radius: 0em 0em .35em .35em;
+            color:#ffeb3b;    
+            transition:.5s ease-in-out;
+            background-color: #40b5a7;
+        }
+        button:hover {
+            background-color: rgb(200, 255, 179);
+            box-shadow: 0px 0px 10px -3px rgba(0, 0, 0,.25);
+            transform:scale(1.02);
+            color:#34a89b;
+            cursor:pointer;
+        }
+}
 }
 }
 
@@ -92,11 +177,19 @@ h1 {
             background-color: #f3f3f3;
             padding: 0.25em;
             margin: 0em 0 1em 0;
+            transition:.5s ease-in-out;
             img {
                 width:100%;
             }
     }
 
+}
+
+.cardType>div:nth-child(3):hover {
+    background-color: rgb(200, 255, 179);
+    box-shadow: 0px 0px 10px -3px rgba(0, 0, 0,.25);
+    transform:scale(1.12);
+    cursor: pointer;
 }
 
 
@@ -111,6 +204,49 @@ h1 {
     width:75%;
     display: flex;
     justify-content: space-between;
+    font-family: Quicksand, open sans, roboto;
+    font-size:.75em;
+    margin-bottom: 1em;
+      div {
+      }
+}
+
+.error {
+    font-weight: 500;
+    border-bottom: thin solid #34a89b;
+    position: absolute;
+    margin-left: 19.5em !important;
+    transition: ease-in-out 1s;
+    opacity:1 !important;
+    color:#298a7f;
+    width:10em !important;
+    text-align: right !important;
+}
+
+.cvvErrorMessage {
+    font-weight: 500;
+    border-bottom: thin solid #34a89b;
+    position: absolute;
+    margin-left: 7.8em !important;
+    margin-top:1.1em;
+    -webkit-transition: ease-in-out 1s;
+    transition: ease-in-out 1s;
+    opacity: 1 !important;
+    color: #298a7f;
+    font-size: 1.33em;
+    width: 10em !important;
+    text-align: right !important;
+}
+
+.terms {
+    margin-top: 2em;
+    font-family: Quicksand, open sans, roboto;
+    font-size: 1em;
+    width: 25em;
+    padding: .75em;
+    color: #219688;
+    line-height: 1.5;
+    text-align: center;
 }
 
 #invalidInput {

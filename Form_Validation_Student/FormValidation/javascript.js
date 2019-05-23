@@ -90,7 +90,7 @@ oEmailInput.addEventListener('blur',checkEmail);
 var oPasswordInput = document.querySelector('#password');
 oPasswordInput.addEventListener('blur',checkAlphabetic);
 
-var oForm = document.querySelector('form');
+var oForm = document.querySelector('#submit');
 oForm.addEventListener('submit',checkAll);    
 
 
